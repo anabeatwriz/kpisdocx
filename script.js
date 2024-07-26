@@ -1,19 +1,15 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const innerDivs = document.querySelectorAll('.inner-div');
-    const messageBox = document.getElementById('message-box');
+document.querySelectorAll('.inner-div, th').forEach(element => {
+    element.addEventListener('mouseover', function(event) {
+        const message = this.getAttribute('data-message');
+        const messageBox = document.getElementById('message-box');
+        messageBox.innerText = message;
+        messageBox.style.display = 'block';
+        messageBox.style.left = `${event.pageX}px`;
+        messageBox.style.top = `${event.pageY}px`;
+    });
 
-    innerDivs.forEach(div => {
-        div.addEventListener('mouseover', (event) => {
-            const message = div.getAttribute('data-message');
-            messageBox.style.display = 'block';
-            messageBox.textContent = message;
-            messageBox.style.top = `${event.clientY + 10}px`;
-            messageBox.style.left = `${event.clientX + 10}px`;
-        });
-
-        div.addEventListener('mouseout', () => {
-            messageBox.style.display = 'none';
-            messageBox.textContent = '';
-        });
+    element.addEventListener('mouseout', function() {
+        const messageBox = document.getElementById('message-box');
+        messageBox.style.display = 'none';
     });
 });
