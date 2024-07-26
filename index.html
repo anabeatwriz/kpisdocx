@@ -10,7 +10,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <img src="img/vhsys_logo_semi.png" alt="VHSYS Logo">
+                <img src="path/to/logo.png" alt="VHSYS Logo">
             </div>
             <div class="title">
                 <h1>VISÃO GERAL</h1>
@@ -58,13 +58,13 @@
         <table>
             <thead>
                 <tr>
-                    <th>KPI</th>
-                    <th>QUALIDADE</th>
-                    <th>TMA</th>
-                    <th>%CSAT</th>
-                    <th>%FCR</th>
-                    <th>VENDAS</th>
-                    <th>QUARTIL</th>
+                    <th data-message="Key Performance Indicator">KPI</th>
+                    <th data-message="Qualidade">QUALIDADE</th>
+                    <th data-message="Tempo Médio de Atendimento">TMA</th>
+                    <th data-message="Customer Satisfaction">%CSAT</th>
+                    <th data-message="First Call Resolution">%FCR</th>
+                    <th data-message="Vendas">VENDAS</th>
+                    <th data-message="Quartil">QUARTIL</th>
                 </tr>
             </thead>
             <tbody>
@@ -115,7 +115,7 @@
         </div>
     </section>
 
-    <div id="message-box" style="display: none; position: absolute; background: #eee; border: 1px solid #ccc; padding: 10px;"></div>
+    <div id="message-box"></div>
 
     <script src="script.js"></script>
 </body>
